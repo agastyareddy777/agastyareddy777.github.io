@@ -2,7 +2,11 @@
   []).push(o),n[o]=function(){var u=arguments;return new Promise(
   function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
   (window,["tagScanner"]);
-
+  var display_a = sessionStorage.getItem('display');
+  if(display_a == "displayActivity"){
+    var set_display = document.getElementById('set_display');
+    set_display.style="display: flex;"
+}
   tagScanner("configure", {
     "edgeConfigId": "3ecc13e1-7ecc-40df-b6ed-7cc1cfb84d92",
     "orgId":"CD402D31565731777F000101@AdobeOrg"
