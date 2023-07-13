@@ -32,7 +32,8 @@
       }
     }
   });
-document.getElementsByTagName("a").addEventListener("click", myFunction);
+document.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', myFunction())});
 function myFunction() {
   tagScanner("sendEvent", {    
     "xdm": {
