@@ -33,7 +33,7 @@
     }
   });
 document.querySelectorAll('a').forEach(link => {
-          link.addEventListener('click', myFunction())});
+          link.addEventListener('click', myFunction)});
 function myFunction() {
   tagScanner("sendEvent", {    
     "xdm": {
