@@ -32,36 +32,6 @@
       }
     }
   });
-document.querySelectorAll('a').forEach(link => {
-          link.addEventListener('click', myFunction)});
-function myFunction() {
-  tagScanner("sendEvent", {    
-    "xdm": {
-      "web": {
-        "webPageDetails": {
-          "name": document.title
-        },
-        "webInteraction": {
-          "linkClicks": {
-              "value": 1
-          },
-          "name": "Custom Click", // Name that shows up in the custom links report
-          "URL": "https://myurl.com", // The URL of the link
-          "type": "other" // values: other, download, exit
-        }
-
-      },
-      "_ags046":{
-        "link_name":"Feedback Form",
-        "link_click":"Yes",
-        "propertyName": property_name,
-        "version":"version- 1.1.0",
-        "page_url": page_url,
-        "launch_page_url": launch_page_url_1
-      }
-    }
-  });
-}
   /**
  * Copyright 2019 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
