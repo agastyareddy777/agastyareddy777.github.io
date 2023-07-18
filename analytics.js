@@ -27,6 +27,7 @@
   var property_name = document.getElementById('property_name')|| sessionStorage.getItem("launch_property_name")||"NA";
   var page_url = "https://www.tagscanner.com"+window.location.pathname;
   var launch_page_url = sessionStorage.getItem("launch_page_url");
+  var user_id = sessionStorage.getItem("userID");
   launch_page_url = launch_page_url.split('?');
   var launch_page_url_1 = "";
   if(launch_page_url[1]){
@@ -45,7 +46,8 @@
         "propertyName": property_name,
         "version":"version- 1.1.0",
         "page_url": page_url,
-        "launch_page_url": launch_page_url_1
+        "launch_page_url": launch_page_url_1,
+        "user_id": user_id
       }
     }
   });
