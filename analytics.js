@@ -16,6 +16,10 @@
     }
     else if(options.xdm.web.webInteraction.type == 'other'){
       options.xdm.web.webInteraction.name = undefined;
+      var url_split = options.xdm.web.webInteraction.URL.split('/');
+      if(url_split.length > 1){
+        options.xdm.web.webInteraction.URL = url_split[url_split.length-1];
+      }
     }
   }
 
