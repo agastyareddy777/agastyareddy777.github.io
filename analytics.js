@@ -11,7 +11,10 @@
     "edgeConfigId": "3ecc13e1-7ecc-40df-b6ed-7cc1cfb84d92",
     "orgId":"CD402D31565731777F000101@AdobeOrg",
   onBeforeLinkClickSend: function(options) {
-    if (options.xdm.web.webInteraction.type === "download" || options.xdm.web.webInteraction.type === "other" || options.xdm.web.webInteraction.type === "exit") {
+    if (options.xdm.web.webInteraction.type === "download" || options.xdm.web.webInteraction.type === "exit") {
+      options.xdm.web.webInteraction.name = document.title;
+    }
+    else if(options.xdm.web.webInteraction.type == 'other'){
       options.xdm.web.webInteraction.name = undefined;
     }
   }
