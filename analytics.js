@@ -14,15 +14,7 @@
     if (options.xdm.web.webInteraction.type === "download" || options.xdm.web.webInteraction.type === "exit") {
       options.xdm.web.webInteraction.name = document.title;
     }
-    else if(options.xdm.web.webInteraction.type == 'other'){
-      options.xdm.web.webInteraction.name = undefined;
-      var url_split = options.xdm.web.webInteraction.URL.split('/');
-      if(url_split.length > 1){
-        options.xdm.web.webInteraction.URL = url_split[url_split.length-1];
-      }
-    }
   }
-
   });
   var property_name = document.getElementById('property_name')|| sessionStorage.getItem("launch_property_name")||"NA";
   var page_url = "https://www.tagscanner.com"+window.location.pathname;
